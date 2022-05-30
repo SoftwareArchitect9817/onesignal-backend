@@ -4,6 +4,7 @@ const CronJob = require('cron').CronJob;
 
 module.exports = async (io) => {
     io.on("connection", (socket) => {
+        console.log(socket.id, "--connection--")
 
     })
 

@@ -12,7 +12,7 @@ exports.pricefetch = async (io) => {
     axios(config)
         .then(function (response) {
             let currentprice = Number(response.data.price)
-            console.log(lastprice);
+            // console.log(lastprice);
             if (lastprice !== 0) {
                 if (lastprice - currentprice >= 1.5) {
                     io.sockets.emit("changedprice", { "state": "⬇️", "price": currentprice })
